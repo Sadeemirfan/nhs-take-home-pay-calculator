@@ -10,86 +10,63 @@ Visit: [https://sadeemirfan.github.io/nhs-take-home-pay-calculator/](https://sad
 
 ### Calculator
 - **NHS Pay Band Selection** - All Agenda for Change bands (2-9) with entry, intermediate, and top pay points
-- **Manual Salary Input** - Enter any custom annual salary
+- **Custom Salary Input** - Enter any annual salary amount
 - **Tax Region Support** - England/Wales/NI and Scottish tax rates
-- **Income Tax Calculation** - Full marginal tax calculation including personal allowance tapering above Â£100,000
+- **Income Tax Calculation** - Full marginal tax calculation including personal allowance tapering above 100,000
 - **National Insurance** - Employee NI at 8% (main) and 2% (upper)
 - **NHS Pension** - All 6 contribution tiers (5.2% to 12.5%) based on pensionable pay
-- **Student Loans** - Plans 1, 2, 4, 5 and Postgraduate with correct thresholds
-- **Additional Income** - Overtime, enhancements, and other taxable income
-- **Salary Sacrifice** - Pre-tax deductions (cycle to work, childcare, etc.)
-- **Visual Breakdown** - Interactive doughnut chart showing pay distribution
-- **Period Toggle** - View results as annual, monthly, or weekly amounts
-- **Effective Tax Rate** - Shows your overall tax burden as a percentage
+- **Student Loans** - Plans 1, 2, 4, 5 and Postgraduate with correct 2025/26 thresholds
+- **Visual Breakdown** - Interactive donut chart showing salary distribution
+- **Period Views** - Toggle between annual, monthly and weekly figures
 
-### Tax Year 2025/26 Rates
+### Design
+- Modern, professional NHS blue colour scheme
+- Fully mobile responsive
+- SEO optimised with meta tags and Schema.org markup
+- Single-file deployment (no dependencies)
 
-#### England/Wales/NI Tax Bands
-| Band | Rate | Threshold |
-|------|------|-----------|
-| Personal Allowance | 0% | Up to Â£12,570 |
-| Basic Rate | 20% | Â£12,571 - Â£50,270 |
-| Higher Rate | 40% | Â£50,271 - Â£125,140 |
-| Additional Rate | 45% | Over Â£125,140 |
+## Tax Year 2025/26 Rates
 
-#### Scottish Tax Bands
-| Band | Rate | Threshold |
-|------|------|-----------|
-| Personal Allowance | 0% | Up to Â£12,570 |
-| Starter Rate | 19% | Â£12,571 - Â£14,876 |
-| Basic Rate | 20% | Â£14,877 - Â£26,561 |
-| Intermediate Rate | 21% | Â£26,562 - Â£43,662 |
-| Higher Rate | 42% | Â£43,663 - Â£75,000 |
-| Advanced Rate | 45% | Â£75,001 - Â£125,140 |
-| Top Rate | 48% | Over Â£125,140 |
+### Income Tax (England/Wales/NI)
+| Band | Threshold | Rate |
+|------|-----------|------|
+| Personal Allowance | Up to 12,570 | 0% |
+| Basic | 12,571 - 50,270 | 20% |
+| Higher | 50,271 - 125,140 | 40% |
+| Additional | Over 125,140 | 45% |
 
-#### NHS Pension Contribution Rates
-| Pensionable Pay | Contribution Rate |
-|----------------|-------------------|
-| Up to Â£13,246 | 5.2% |
-| Â£13,247 - Â£26,823 | 6.5% |
-| Â£26,824 - Â£32,691 | 8.3% |
-| Â£32,692 - Â£49,078 | 9.8% |
-| Â£49,079 - Â£62,924 | 10.7% |
-| Over Â£62,924 | 12.5% |
+### Income Tax (Scotland)
+| Band | Threshold | Rate |
+|------|-----------|------|
+| Personal Allowance | Up to 12,570 | 0% |
+| Starter | 12,571 - 15,397 | 19% |
+| Basic | 15,398 - 27,491 | 20% |
+| Intermediate | 27,492 - 43,662 | 21% |
+| Higher | 43,663 - 75,000 | 42% |
+| Advanced | 75,001 - 125,140 | 45% |
+| Top | Over 125,140 | 48% |
 
-### SEO & Technical
-- Schema.org WebApplication and FAQPage structured data
-- Open Graph and Twitter Card meta tags
-- Semantic HTML5 with ARIA accessibility attributes
-- Fully responsive design (mobile, tablet, desktop)
-- No external dependencies - single HTML file
-- Fast loading - no frameworks or libraries required
+### National Insurance
+- 8% on earnings between 12,570 and 50,270
+- 2% on earnings above 50,270
 
-## Agenda for Change Pay Bands 2025/26
+### NHS Pension Tiers
+| Tier | Pensionable Pay | Rate |
+|------|----------------|------|
+| 1 | Up to 13,259 | 5.2% |
+| 2 | 13,260 - 27,797 | 6.5% |
+| 3 | 27,798 - 33,868 | 8.3% |
+| 4 | 33,869 - 50,845 | 9.8% |
+| 5 | 50,846 - 65,190 | 10.7% |
+| 6 | 65,191+ | 12.5% |
 
-| Band | Entry Point | Top of Band |
-|------|-------------|-------------|
-| Band 2 | Â£23,615 | Â£24,336 |
-| Band 3 | Â£24,625 | Â£25,674 |
-| Band 4 | Â£26,530 | Â£29,114 |
-| Band 5 | Â£29,970 | Â£36,483 |
-| Band 6 | Â£37,338 | Â£44,962 |
-| Band 7 | Â£46,148 | Â£52,809 |
-| Band 8a | Â£53,755 | Â£60,504 |
-| Band 8b | Â£62,215 | Â£72,293 |
-| Band 8c | Â£73,664 | Â£86,074 |
-| Band 8d | Â£87,410 | Â£101,064 |
-| Band 9 | Â£105,385 | Â£121,271 |
-
-## Technology
-
-- Pure HTML, CSS, and JavaScript
-- No frameworks or external dependencies
-- Canvas API for doughnut chart visualization
-- CSS Custom Properties for theming
-- Responsive grid layout
+## Tech Stack
+- Pure HTML5, CSS3, and vanilla JavaScript
+- No external dependencies or frameworks
 - Hosted on GitHub Pages
 
 ## Disclaimer
-
-This calculator is for informational purposes only. While we strive to keep the calculations accurate and up to date with HMRC and NHS guidelines, this tool should not be used as a substitute for professional financial advice. Always verify your pay with your employer's payroll department or a qualified accountant.
+This is an independent tool and is not affiliated with or endorsed by the NHS. Results are estimates based on standard tax rates and may differ from actual pay due to overtime, enhancements, HCAS, salary sacrifice, or other factors.
 
 ## License
-
-MIT License - feel free to use and modify.
+MIT License
