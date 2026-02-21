@@ -1,0 +1,7 @@
+# Robots.txt for NHS Take Home Pay Calculator
+# https://nhstakehomepay.casa/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://nhstakehomepay.casa/sitemap.xml
