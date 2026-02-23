@@ -55,21 +55,11 @@ body{
 .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:20px}
 .footer-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:13px;transition:color 0.2s}
 .footer-links a:hover{color:#fff}
-.footer-copy p{font-size:12px;margin:4px 0;color:rgba(255,255,255,0.5)}
+.footer-copy p{font-size:12px;margin:4px 0}
+.page-header{background:linear-gradient(135deg,var(--nhs-dark) 0%,var(--nhs-blue) 100%);color:#fff;padding:48px 16px;text-align:center}
+.page-header h1{font-size:32px;margin-bottom:8px}
+.page-header p{font-size:16px;opacity:0.9;max-width:600px;margin:0 auto}
 .page-container{max-width:900px;margin:0 auto;padding:32px 16px}
-.page-container h1{font-size:28px;color:var(--nhs-dark);margin-bottom:8px}
-.page-container h2{font-size:22px;color:var(--nhs-blue);margin-top:32px;margin-bottom:12px}
-.page-container h3{font-size:18px;color:var(--nhs-dark);margin-top:24px;margin-bottom:8px}
-.page-container p{margin-bottom:16px;color:var(--text-secondary);line-height:1.7}
-.page-container ul,.page-container ol{margin:0 0 16px 24px;color:var(--text-secondary)}
-.page-container li{margin-bottom:8px;line-height:1.6}
-.page-container a{color:var(--nhs-blue);text-decoration:none}
-.page-container a:hover{text-decoration:underline}
-.page-container table{width:100%;border-collapse:collapse;margin:16px 0 24px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
-.page-container th{background:var(--nhs-blue);color:#fff;padding:12px 16px;text-align:left;font-size:14px;font-weight:600}
-.page-container td{padding:10px 16px;border-bottom:1px solid var(--border);font-size:14px;color:var(--text)}
-.page-container tr:last-child td{border-bottom:none}
-.page-container tr:hover td{background:#f8fafe}
 .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-top:24px}
 .blog-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;text-decoration:none;color:inherit}
 .blog-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.12)}
@@ -77,32 +67,42 @@ body{
 .blog-card-body h3{font-size:17px;color:var(--nhs-dark);margin-bottom:8px;line-height:1.4}
 .blog-card-body p{font-size:14px;color:var(--text-secondary);margin:0;line-height:1.5}
 .blog-card-meta{font-size:12px;color:var(--text-secondary);margin-bottom:12px;display:flex;gap:12px}
-.blog-card-tag{display:inline-block;background:#e8f4fd;color:var(--nhs-blue);padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;margin-bottom:8px}
-.cta-box{background:linear-gradient(135deg,var(--nhs-blue),var(--nhs-dark));color:#fff;padding:32px;border-radius:var(--radius);text-align:center;margin:32px 0}
-.cta-box h3{font-size:20px;margin-bottom:8px;color:#fff}
-.cta-box p{color:rgba(255,255,255,0.9);margin-bottom:16px}
-.cta-btn{display:inline-block;background:#fff;color:var(--nhs-blue);padding:12px 28px;border-radius:8px;font-weight:700;text-decoration:none;font-size:15px;transition:all 0.2s}
-.cta-btn:hover{background:#e8f4fd;text-decoration:none}
-.breadcrumb{font-size:13px;color:var(--text-secondary);margin-bottom:16px}
-.breadcrumb a{color:var(--nhs-blue)}
-.article-meta{display:flex;gap:16px;font-size:13px;color:var(--text-secondary);margin-bottom:24px;flex-wrap:wrap}
-.related-articles{margin-top:48px;padding-top:32px;border-top:2px solid var(--border)}
-.related-articles h2{color:var(--nhs-dark)}
-
-.blog-hero{background:linear-gradient(135deg,var(--nhs-blue),var(--nhs-dark));color:#fff;padding:48px 16px;text-align:center;margin-bottom:0}
-.blog-hero h1{font-size:32px;margin-bottom:8px}
-.blog-hero p{font-size:16px;opacity:0.9;max-width:600px;margin:0 auto}
+.blog-card-tag{display:inline-block;background:#e8f4fd;color:var(--nhs-blue);font-size:12px;font-weight:600;padding:4px 10px;border-radius:20px;margin-bottom:12px}
+.cta-box{background:linear-gradient(135deg,var(--nhs-dark) 0%,var(--nhs-blue) 100%);color:#fff;border-radius:var(--radius);padding:32px;text-align:center;margin-top:40px}
+.cta-box h3{font-size:22px;margin-bottom:8px}
+.cta-box p{opacity:0.9;margin-bottom:20px}
+.cta-btn{display:inline-block;background:#fff;color:var(--nhs-blue);font-weight:700;padding:12px 32px;border-radius:8px;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.2)}
+@media(max-width:768px){
+  .page-header{padding:32px 16px}
+  .page-header h1{font-size:24px}
+  .blog-grid{grid-template-columns:1fr}
+}
 </style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Blog",
+  "name":"NHS Pay Blog",
+  "description":"Expert guides on NHS pay bands, take home pay calculations, pension contributions, and tax tips.",
+  "url":"https://nhstakehomepay.casa/blog.html",
+  "publisher":{
+    "@type":"Organization",
+    "name":"NHS Take Home Pay Calculator",
+    "url":"https://nhstakehomepay.casa"
+  }
+}
+</script>
 </head>
 <body>
 <nav class="site-nav">
 <div class="nav-inner">
 <a href="index.html" class="nav-logo">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28"><rect x="2" y="2" width="28" height="28" rx="4" fill="#fff"/><text x="16" y="23" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#005EB8" text-anchor="middle">&#163;</text></svg>
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#003087"/><text x="14" y="19" text-anchor="middle" fill="white" font-size="16" font-weight="bold" font-family="Arial">&#163;</text></svg>
 NHS Pay Calculator
 </a>
 <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
-<svg width="24" height="24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
 </button>
 <div class="nav-links">
 <a href="index.html">Calculator</a>
@@ -112,13 +112,134 @@ NHS Pay Calculator
 </div>
 </div>
 </nav>
-<div class="blog-hero">
+
+<div class="page-header">
 <h1>NHS Pay Blog</h1>
 <p>Expert guides on NHS salaries, take home pay, pension contributions, and tax tips for healthcare professionals across the UK.</p>
 </div>
 <div class="page-container">
 
 <div class="blog-grid">
+
+<a href="blog/nhs-band-2-take-home-pay.html" class="blog-card">
+<div class="blog-card-body">
+<span class="blog-card-tag">Band 2</span>
+<h3>NHS Band 2 Take Home Pay 2025/26: Healthcare Assistant Salary</h3>
+<div class="blog-card-meta">
+<span>23 Feb 2026</span>
+<span>8 min read</span>
+</div>
+<p>Band 2 salary breakdown for Healthcare Assistants, Porters, and Domestic staff after tax, NI and pension.</p>
+</div>
+</a>
+
+<a href="blog/nhs-band-3-take-home-pay.html" class="blog-card">
+<div class="blog-card-body">
+<span class="blog-card-tag">Band 3</span>
+<h3>NHS Band 3 Take Home Pay 2025/26: Senior HCA &amp; Admin Guide</h3>
+<div class="blog-card-meta">
+<span>23 Feb 2026</span>
+<span>8 min read</span>
+</div>
+<p>Band 3 salary after deductions for Senior HCAs, Phlebotomists, and Admin Officers.</p>
+</div>
+</a>
+
+<a href="blog/nhs-band-4-take-home-pay.html" class="blog-card">
+<div class="blog-card-body">
+<span class="blog-card-tag">Band 4</span>
+<h3>NHS Band 4 Take Home Pay 2025/26: Associate Practitioner Guide</h3>
+<div class="blog-card-meta">
+<span>23 Feb 2026</span>
+<span>8 min read</span>
+</div>
+<p>Band 4 salary breakdown for Associate Practitioners, Nursing Associates, and Pharmacy Technicians.</p>
+</div>
+</a>
+
+<a href="blog/nhs-band-7-take-home-pay.html" class="blog-card">
+<div class="blog-card-body">
+<span class="blog-card-tag">Band 7</span>
+<h3>NHS Band 7 Take Home Pay 2025/26: Ward Manager Salary</h3>
+<div class="blog-card-meta">
+<span>23 Feb 2026</span>
+<span>9 min read</span>
+</div>
+<p>Band 7 salary after tax for Ward Managers, Team Leaders, and Advanced Practitioners.</p>
+</div>
+</a>
+
+<a href="blog/nhs-band-8a-take-home-pay.html" class="blog-card">
+<div class="blog-card-body">
+<span class="blog-card-tag">Band 8a</span>
+<h3>NHS Band 8a Take Home Pay 2025/26: Senior Manager Salary</h3>
+<div class="blog-card-meta">
+<span>23 Feb 2026</span>
+<span>9 min read</span>
+</div>
+<p>Band 8a salary in the 40% tax bracket. Monthly breakdown for senior NHS managers.</p>
+</div>
+</a>
+
+<a href="blog/nhs-doctor-take-home-pay.html" class="blog-card">
+<div class="blog-card-body">
+<span class="blog-card-tag">Doctors</span>
+<h3>NHS Doctor Take Home Pay 2025/26: Junior Doctor to Consultant</h3>
+<div class="blog-card-meta">
+<span>23 Feb 2026</span>
+<span>10 min read</span>
+</div>
+<p>Doctor pay scales from FY1 to Consultant with on-call supplements and pension explained.</p>
+</div>
+</a>
+
+<a href="blog/nhs-midwife-salary.html" class="blog-card">
+<div class="blog-card-body">
+<span class="blog-card-tag">Midwifery</span>
+<h3>NHS Midwife Salary 2025/26: Band 5 to Band 7 Take Home Pay</h3>
+<div class="blog-card-meta">
+<span>23 Feb 2026</span>
+<span>8 min read</span>
+</div>
+<p>Midwife salary from newly qualified Band 5 to Band 7 team leader, with take home pay after all deductions.</p>
+</div>
+</a>
+
+<a href="blog/nhs-part-time-take-home-pay.html" class="blog-card">
+<div class="blog-card-body">
+<span class="blog-card-tag">Part-Time</span>
+<h3>NHS Part-Time Take Home Pay Calculator: How Pro Rata Affects Your Salary</h3>
+<div class="blog-card-meta">
+<span>23 Feb 2026</span>
+<span>9 min read</span>
+</div>
+<p>Learn how part-time NHS pay works with pro rata calculations. Examples for Band 3, Band 5, and Band 7.</p>
+</div>
+</a>
+
+<a href="blog/nhs-london-weighting-pay.html" class="blog-card">
+<div class="blog-card-body">
+<span class="blog-card-tag">London</span>
+<h3>NHS London Weighting Explained: Take Home Pay Impact</h3>
+<div class="blog-card-meta">
+<span>23 Feb 2026</span>
+<span>9 min read</span>
+</div>
+<p>Inner London, Outer London, and Fringe supplements with Band 5 comparison examples.</p>
+</div>
+</a>
+
+<a href="blog/nhs-wales-pay.html" class="blog-card">
+<div class="blog-card-body">
+<span class="blog-card-tag">Wales</span>
+<h3>NHS Wales Pay 2025/26: Welsh Take Home Pay Guide</h3>
+<div class="blog-card-meta">
+<span>23 Feb 2026</span>
+<span>8 min read</span>
+</div>
+<p>NHS Wales pay bands, Welsh income tax, and comparison with England NHS salaries.</p>
+</div>
+</a>
 
 <a href="blog/nhs-pay-bands-2025-26-complete-guide.html" class="blog-card">
 <div class="blog-card-body">
@@ -170,16 +291,15 @@ NHS Pay Calculator
 
 <a href="blog/scotland-vs-england-nhs-pay.html" class="blog-card">
 <div class="blog-card-body">
-<span class="blog-card-tag">Scotland vs England</span>
-<h3>Scotland vs England NHS Pay: Tax Differences That Affect Your Take Home</h3>
+<span class="blog-card-tag">Scotland</span>
+<h3>Scotland vs England NHS Pay 2025: Tax &amp; Salary Differences</h3>
 <div class="blog-card-meta">
 <span>21 Feb 2026</span>
-<span>8 min read</span>
+<span>9 min read</span>
 </div>
-<p>How Scottish income tax bands differ from English rates and what that means for your NHS take home pay. Real examples for Band 5 and Band 7.</p>
+<p>How Scottish income tax rates affect NHS take home pay compared to England. Band-by-band comparison with real numbers.</p>
 </div>
 </a>
-
 </div>
 
 <div class="cta-box">
@@ -199,71 +319,10 @@ NHS Pay Calculator
 <a href="disclaimer.html">Disclaimer</a>
 <a href="privacy.html">Privacy Policy</a>
 <a href="terms.html">Terms of Use</a>
-<a href="blog/nhs-part-time-take-home-pay.html" class="article-card">
-<div class="article-tag">Part-Time</div>
-<h3>NHS Part-Time Take Home Pay Calculator: How Pro Rata Affects Your Salary</h3>
-<p>Learn how part-time NHS pay works with pro rata calculations. Examples for Band 3, Band 5, and Band 7.</p>
-<span class="read-more">Read article &rarr;</span>
-</a>
-<a href="blog/nhs-band-2-take-home-pay.html" class="article-card">
-<div class="article-tag">Band 2</div>
-<h3>NHS Band 2 Take Home Pay 2025/26: Healthcare Assistant Salary</h3>
-<p>Band 2 salary breakdown for Healthcare Assistants, Porters, and Domestic staff after tax, NI and pension.</p>
-<span class="read-more">Read article &rarr;</span>
-</a>
-<a href="blog/nhs-band-3-take-home-pay.html" class="article-card">
-<div class="article-tag">Band 3</div>
-<h3>NHS Band 3 Take Home Pay 2025/26: Senior HCA &amp; Admin Guide</h3>
-<p>Band 3 salary after deductions for Senior HCAs, Phlebotomists, and Admin Officers.</p>
-<span class="read-more">Read article &rarr;</span>
-</a>
-<a href="blog/nhs-band-4-take-home-pay.html" class="article-card">
-<div class="article-tag">Band 4</div>
-<h3>NHS Band 4 Take Home Pay 2025/26: Associate Practitioner Guide</h3>
-<p>Band 4 salary breakdown for Associate Practitioners, Nursing Associates, and Pharmacy Technicians.</p>
-<span class="read-more">Read article &rarr;</span>
-</a>
-<a href="blog/nhs-band-7-take-home-pay.html" class="article-card">
-<div class="article-tag">Band 7</div>
-<h3>NHS Band 7 Take Home Pay 2025/26: Ward Manager Salary</h3>
-<p>Band 7 salary after tax for Ward Managers, Team Leaders, and Advanced Practitioners.</p>
-<span class="read-more">Read article &rarr;</span>
-</a>
-<a href="blog/nhs-band-8a-take-home-pay.html" class="article-card">
-<div class="article-tag">Band 8a</div>
-<h3>NHS Band 8a Take Home Pay 2025/26: Senior Manager Salary</h3>
-<p>Band 8a salary in the 40% tax bracket. Monthly breakdown for senior NHS managers.</p>
-<span class="read-more">Read article &rarr;</span>
-</a>
-<a href="blog/nhs-doctor-take-home-pay.html" class="article-card">
-<div class="article-tag">Doctors</div>
-<h3>NHS Doctor Take Home Pay 2025/26: Junior Doctor to Consultant</h3>
-<p>Doctor pay scales from FY1 to Consultant with on-call supplements and pension explained.</p>
-<span class="read-more">Read article &rarr;</span>
-</a>
-<a href="blog/nhs-london-weighting-pay.html" class="article-card">
-<div class="article-tag">London</div>
-<h3>NHS London Weighting Explained: Take Home Pay Impact</h3>
-<p>Inner London, Outer London, and Fringe supplements with Band 5 comparison examples.</p>
-<span class="read-more">Read article &rarr;</span>
-</a>
-<a href="blog/nhs-wales-pay.html" class="article-card">
-<div class="article-tag">Wales</div>
-<h3>NHS Wales Pay 2025/26: Welsh Take Home Pay Guide</h3>
-<p>NHS Wales pay bands, Welsh income tax, and comparison with England NHS salaries.</p>
-<span class="read-more">Read article &rarr;</span>
-</a>
-<a href="blog/nhs-midwife-salary.html" class="article-card">
-<div class="article-tag">Midwifery</div>
-<h3>NHS Midwife Salary 2025/26: Band 5-7 Breakdown</h3>
-<p>Midwife career path from Band 5 to Band 7 with unsocial hours and on-call pay explained.</p>
-<span class="read-more">Read article &rarr;</span>
-</a>
 </div>
 <div class="footer-copy">
-<p>Designed and Developed by Sadeem</p>
-<p>&#169; 2025 NHS Take Home Pay Calculator. All rights reserved.</p>
-<p>This calculator is not affiliated with or endorsed by the National Health Service (NHS).</p>
+<p>&copy; 2025 NHS Take Home Pay Calculator. All rights reserved.</p>
+<p>Not affiliated with the NHS. For informational purposes only.</p>
 </div>
 </div>
 </footer>
