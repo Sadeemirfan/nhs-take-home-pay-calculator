@@ -11,74 +11,19 @@
 <meta name="keywords" content="nhs pay blog, nhs salary guide, nhs tax tips, nhs pension advice, agenda for change pay">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://nhstakehomepay.casa/blog.html">
+<link rel="stylesheet" href="style.css">
 <meta property="og:title" content="NHS Pay Blog - Salary Guides, Tax Tips &amp; Pension Advice">
 <meta property="og:description" content="Expert guides on NHS pay bands, take home pay calculations, pension contributions, and tax tips for all NHS Agenda for Change staff in 2025/26.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://nhstakehomepay.casa/brand-images/banner.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://nhstakehomepay.casa/blog.html">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NHS Pay Blog - Salary Guides &amp; Tax Tips">
 <meta name="twitter:description" content="Expert guides on NHS pay bands, take home pay, pensions, and tax tips for NHS staff.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --nhs-blue:#005EB8;
-  --nhs-dark:#003087;
-  --nhs-light:#41B6E6;
-  --bg:#f0f4f5;
-  --card:#fff;
-  --text:#231f20;
-  --text-secondary:#4c6272;
-  --border:#d8dde0;
-  --radius:12px;
-  --shadow:0 2px 8px rgba(0,0,0,0.08);
-}
-body{
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
-  background:var(--bg);color:var(--text);line-height:1.6;
-}
-.site-nav{background:var(--nhs-blue);padding:0 16px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.15)}
-.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
-.nav-logo{color:#fff;text-decoration:none;font-weight:700;font-size:16px;display:flex;align-items:center;gap:8px}
-.nav-links{display:flex;gap:4px}
-.nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;padding:8px 14px;border-radius:6px;font-size:14px;font-weight:500;transition:all 0.2s}
-.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,0.15);color:#fff}
-.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
-@media(max-width:768px){
-  .nav-toggle{display:block}
-  .nav-links{display:none;position:absolute;top:56px;left:0;right:0;background:var(--nhs-blue);flex-direction:column;padding:8px 16px 16px;box-shadow:0 4px 12px rgba(0,0,0,0.2)}
-  .nav-links.open{display:flex}
-  .nav-links a{padding:12px 14px}
-}
-.site-footer{background:#1d1d1b;color:rgba(255,255,255,0.7);text-align:center;padding:32px 16px;margin-top:48px}
-.footer-inner{max-width:1100px;margin:0 auto}
-.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:20px}
-.footer-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:13px;transition:color 0.2s}
-.footer-links a:hover{color:#fff}
-.footer-copy p{font-size:12px;margin:4px 0}
-.page-header{background:linear-gradient(135deg,var(--nhs-dark) 0%,var(--nhs-blue) 100%);color:#fff;padding:48px 16px;text-align:center}
-.page-header h1{font-size:32px;margin-bottom:8px}
-.page-header p{font-size:16px;opacity:0.9;max-width:600px;margin:0 auto}
-.page-container{max-width:900px;margin:0 auto;padding:32px 16px}
-.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-top:24px}
-.blog-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;transition:transform 0.2s,box-shadow 0.2s;text-decoration:none;color:inherit}
-.blog-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.12)}
-.blog-card-body{padding:20px}
-.blog-card-body h3{font-size:17px;color:var(--nhs-dark);margin-bottom:8px;line-height:1.4}
-.blog-card-body p{font-size:14px;color:var(--text-secondary);margin:0;line-height:1.5}
-.blog-card-meta{font-size:12px;color:var(--text-secondary);margin-bottom:12px;display:flex;gap:12px}
-.blog-card-tag{display:inline-block;background:#e8f4fd;color:var(--nhs-blue);font-size:12px;font-weight:600;padding:4px 10px;border-radius:20px;margin-bottom:12px}
-.cta-box{background:linear-gradient(135deg,var(--nhs-dark) 0%,var(--nhs-blue) 100%);color:#fff;border-radius:var(--radius);padding:32px;text-align:center;margin-top:40px}
-.cta-box h3{font-size:22px;margin-bottom:8px}
-.cta-box p{opacity:0.9;margin-bottom:20px}
-.cta-btn{display:inline-block;background:#fff;color:var(--nhs-blue);font-weight:700;padding:12px 32px;border-radius:8px;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s}
-.cta-btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.2)}
-@media(max-width:768px){
-  .page-header{padding:32px 16px}
-  .page-header h1{font-size:24px}
-  .blog-grid{grid-template-columns:1fr}
-}
-</style>
+
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -92,6 +37,9 @@ body{
     "url":"https://nhstakehomepay.casa"
   }
 }
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nhstakehomepay.casa/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://nhstakehomepay.casa/blog.html"}]}
 </script>
 </head>
 <body>
@@ -112,6 +60,7 @@ NHS Pay Calculator
 </div>
 </div>
 </nav>
+<div class="breadcrumb"><a href="index.html">Home</a><span>&#8250;</span>Blog</div>
 
 <div class="page-header">
 <h1>NHS Pay Blog</h1>
@@ -326,5 +275,6 @@ NHS Pay Calculator
 </div>
 </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
