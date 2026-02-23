@@ -10,251 +10,23 @@
 <meta name="description" content="Terms of Use for the NHS Take Home Pay Calculator website. Read about acceptable use, intellectual property, and your responsibilities.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://nhstakehomepay.casa/terms.html">
+<link rel="stylesheet" href="style.css">
 <meta property="og:title" content="Terms of Use - NHS Take Home Pay Calculator">
 <meta property="og:description" content="Terms of Use for the NHS Take Home Pay Calculator website. Read about acceptable use, intellectual property, and your responsibilities.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://nhstakehomepay.casa/brand-images/banner.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://nhstakehomepay.casa/terms.html">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Terms of Use - NHS Take Home Pay Calculator">
 <meta name="twitter:description" content="Terms of Use for the NHS Take Home Pay Calculator website. Read about acceptable use, intellectual property, and your responsibilities.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --nhs-blue:#005EB8;
-  --nhs-dark:#003087;
-  --nhs-light:#41B6E6;
-  --bg:#f0f4f5;
-  --card:#fff;
-  --text:#231f20;
-  --text-secondary:#4c6272;
-  --border:#d8dde0;
-  --radius:12px;
-  --shadow:0 2px 8px rgba(0,0,0,0.08);
-}
-body{
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-}
-.site-nav{
-  background:linear-gradient(135deg,var(--nhs-dark) 0%,var(--nhs-blue) 100%);
-  padding:0 1rem;
-  position:sticky;
-  top:0;
-  z-index:100;
-  box-shadow:0 2px 8px rgba(0,0,0,0.15);
-}
-.nav-inner{
-  max-width:1100px;
-  margin:0 auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  height:56px;
-}
-.nav-logo{
-  display:flex;
-  align-items:center;
-  gap:0.5rem;
-  color:#fff;
-  text-decoration:none;
-  font-weight:700;
-  font-size:1rem;
-}
-.nav-toggle{
-  display:none;
-  background:none;
-  border:none;
-  cursor:pointer;
-  padding:4px;
-}
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:0.25rem;
-}
-.nav-links a{
-  color:rgba(255,255,255,0.85);
-  text-decoration:none;
-  padding:0.4rem 0.75rem;
-  border-radius:6px;
-  font-size:0.875rem;
-  font-weight:500;
-  transition:background 0.2s,color 0.2s;
-}
-.nav-links a:hover,.nav-links a.active{
-  background:rgba(255,255,255,0.15);
-  color:#fff;
-}
-@media(max-width:768px){
-  .nav-toggle{display:block}
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:56px;
-    left:0;
-    right:0;
-    background:var(--nhs-dark);
-    flex-direction:column;
-    padding:0.5rem;
-    box-shadow:0 4px 12px rgba(0,0,0,0.2);
-  }
-  .nav-links.open{display:flex}
-  .nav-links a{padding:0.75rem 1rem;width:100%}
-}
-.page-content{
-  flex:1;
-  max-width:800px;
-  margin:2rem auto;
-  padding:0 1rem;
-  width:100%;
-}
-.content-card{
-  background:var(--card);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  border:1px solid var(--border);
-  overflow:hidden;
-  margin-bottom:1.5rem;
-}
-.content-card-header{
-  background:linear-gradient(135deg,var(--nhs-blue),var(--nhs-dark));
-  color:#fff;
-  padding:1.5rem;
-}
-.content-card-header h1{
-  font-size:1.75rem;
-  font-weight:700;
-  margin-bottom:0.25rem;
-}
-.content-card-header p{
-  opacity:0.9;
-  font-size:0.95rem;
-}
-.content-card-body{
-  padding:1.5rem 2rem 2rem;
-}
-.content-card-body h2{
-  color:var(--nhs-blue);
-  font-size:1.25rem;
-  font-weight:700;
-  margin:1.5rem 0 0.75rem;
-  padding-bottom:0.4rem;
-  border-bottom:2px solid var(--nhs-light);
-}
-.content-card-body h2:first-child{margin-top:0}
-.content-card-body p{
-  color:var(--text-secondary);
-  margin-bottom:1rem;
-  font-size:0.95rem;
-  line-height:1.7;
-}
-.content-card-body ul,.content-card-body ol{
-  color:var(--text-secondary);
-  margin:0 0 1rem 1.5rem;
-  font-size:0.95rem;
-  line-height:1.8;
-}
-.content-card-body li{margin-bottom:0.25rem}
-.content-card-body a{
-  color:var(--nhs-blue);
-  text-decoration:underline;
-}
-.content-card-body a:hover{color:var(--nhs-dark)}
-.content-card-body strong{color:var(--text)}
-.site-footer{
-  background:linear-gradient(135deg,var(--nhs-dark) 0%,#001845 100%);
-  color:rgba(255,255,255,0.8);
-  padding:2rem 1rem;
-  margin-top:auto;
-}
-.footer-inner{
-  max-width:1100px;
-  margin:0 auto;
-  text-align:center;
-}
-.footer-links{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:0.5rem 1.5rem;
-  margin-bottom:1.25rem;
-}
-.footer-links a{
-  color:rgba(255,255,255,0.7);
-  text-decoration:none;
-  font-size:0.85rem;
-  transition:color 0.2s;
-}
-.footer-links a:hover{color:#fff}
-.footer-copy p{
-  font-size:0.8rem;
-  margin-bottom:0.35rem;
-  color:rgba(255,255,255,0.5);
-}
-.footer-copy p:first-child{
-  font-size:0.9rem;
-  color:rgba(255,255,255,0.75);
-  font-weight:500;
-  margin-bottom:0.5rem;
-}
-.contact-form{margin-top:1rem}
-.contact-form .form-group{margin-bottom:1.15rem}
-.contact-form label{
-  display:block;
-  font-weight:600;
-  font-size:0.85rem;
-  color:var(--text);
-  margin-bottom:0.35rem;
-}
-.contact-form input,.contact-form textarea,.contact-form select{
-  width:100%;
-  padding:0.65rem 0.85rem;
-  border:1.5px solid var(--border);
-  border-radius:8px;
-  font-size:0.95rem;
-  font-family:inherit;
-  background:#fff;
-  transition:border-color 0.2s;
-}
-.contact-form input:focus,.contact-form textarea:focus{
-  outline:none;
-  border-color:var(--nhs-blue);
-  box-shadow:0 0 0 3px rgba(0,94,184,0.1);
-}
-.contact-form textarea{min-height:120px;resize:vertical}
-.contact-form .btn-submit{
-  background:linear-gradient(135deg,var(--nhs-blue),var(--nhs-dark));
-  color:#fff;
-  border:none;
-  padding:0.75rem 2rem;
-  border-radius:8px;
-  font-size:1rem;
-  font-weight:600;
-  cursor:pointer;
-  transition:transform 0.15s,box-shadow 0.15s;
-}
-.contact-form .btn-submit:hover{
-  transform:translateY(-1px);
-  box-shadow:0 4px 12px rgba(0,48,135,0.3);
-}
-.form-success{
-  display:none;
-  background:#e8f5e9;
-  border:1px solid #4caf50;
-  border-radius:8px;
-  padding:1rem;
-  color:#2e7d32;
-  text-align:center;
-  margin-top:1rem;
-}
-</style>
+
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Terms of Use","description":"Terms of Use for the NHS Take Home Pay Calculator.","url":"https://nhstakehomepay.casa/terms.html"}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nhstakehomepay.casa/"},{"@type":"ListItem","position":2,"name":"Terms of Use","item":"https://nhstakehomepay.casa/terms.html"}]}
+</script>
 </head>
 <body>
 <nav class="site-nav">
@@ -277,6 +49,7 @@ NHS Pay Calculator
 </div>
 </div>
 </nav>
+<div class="breadcrumb"><a href="index.html">Home</a><span>&#8250;</span>Terms of Use</div>
 <main class="page-content">
 <div class="content-card">
 <div class="content-card-header">
@@ -364,5 +137,6 @@ NHS Pay Calculator
 </div>
 </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
