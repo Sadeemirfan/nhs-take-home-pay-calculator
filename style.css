@@ -876,3 +876,41 @@ body{
   .breakdown-table td{font-size:0.8rem;padding:0.5rem 0.15rem}
   .form-group select,.form-group input{font-size:0.875rem;padding:0.55rem 0.65rem}
 }
+
+/* === COOKIE CONSENT BANNER === */
+.cookie-banner{
+  position:fixed;
+  left:0;right:0;bottom:0;
+  z-index:1000;
+  background:var(--nhs-dark);
+  color:#fff;
+  padding:1rem 1.25rem;
+  box-shadow:0 -2px 12px rgba(0,0,0,0.2);
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:1rem;
+}
+.cookie-banner p{
+  margin:0;
+  font-size:0.9rem;
+  max-width:640px;
+  flex:1 1 320px;
+}
+.cookie-banner a{color:var(--nhs-light)}
+.cookie-banner-actions{display:flex;gap:0.6rem;flex-shrink:0}
+.cookie-banner button{
+  border:none;
+  border-radius:6px;
+  padding:0.55rem 1.1rem;
+  font-size:0.9rem;
+  font-weight:600;
+  cursor:pointer;
+}
+.cookie-banner .btn-accept{background:var(--nhs-green);color:#fff}
+.cookie-banner .btn-decline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.5)}
+@media(max-width:600px){
+  .cookie-banner{flex-direction:column;align-items:stretch;text-align:center}
+  .cookie-banner-actions{justify-content:center}
+}

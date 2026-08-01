@@ -13,13 +13,66 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+
+  initCookieConsent();
 });
+
+// Cookie Consent Banner (Google Consent Mode)
+function initCookieConsent() {
+  var CONSENT_KEY = 'cookieConsent';
+  var stored = localStorage.getItem(CONSENT_KEY);
+
+  if (stored === 'granted' && typeof gtag === 'function') {
+    gtag('consent', 'update', {'analytics_storage': 'granted'});
+  }
+  if (stored) return;
+
+  var privacyHref = (location.pathname.indexOf('/blog/') > -1 ? '../privacy.html' : 'privacy.html');
+
+  var banner = document.createElement('div');
+  banner.className = 'cookie-banner';
+  banner.innerHTML =
+    '<p>We use cookies for basic site analytics (Google Analytics) to see how the calculator is used. ' +
+    'No salary figures you enter are ever stored or sent anywhere. See our ' +
+    '<a href="' + privacyHref + '">Privacy Policy</a>.</p>' +
+    '<div class="cookie-banner-actions">' +
+      '<button class="btn-decline" type="button">Decline</button>' +
+      '<button class="btn-accept" type="button">Accept</button>' +
+    '</div>';
+  document.body.appendChild(banner);
+
+  banner.querySelector('.btn-accept').addEventListener('click', function() {
+    localStorage.setItem(CONSENT_KEY, 'granted');
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {'analytics_storage': 'granted'});
+    }
+    banner.remove();
+  });
+  banner.querySelector('.btn-decline').addEventListener('click', function() {
+    localStorage.setItem(CONSENT_KEY, 'denied');
+    banner.remove();
+  });
+}
 
 // Contact Form Handler
 function handleSubmit(e) {
   e.preventDefault();
   var form = document.getElementById('contactForm');
   var success = document.getElementById('formSuccess');
+
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var subjectSelect = document.getElementById('subject');
+  var subjectLabel = subjectSelect.options[subjectSelect.selectedIndex].text;
+  var message = document.getElementById('message').value;
+
+  var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+  var mailtoLink = 'mailto:nhstakehomepay@gmail.com' +
+    '?subject=' + encodeURIComponent('[' + subjectLabel + '] Message from ' + name) +
+    '&body=' + encodeURIComponent(body);
+
+  window.location.href = mailtoLink;
+
   form.style.display = 'none';
   success.style.display = 'block';
   return false;
