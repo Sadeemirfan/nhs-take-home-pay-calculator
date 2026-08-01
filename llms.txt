@@ -1,0 +1,33 @@
+# NHS Take Home Pay Calculator
+
+> Free, independent calculator for NHS staff in England, Wales, Scotland and Northern Ireland to work out their net salary after Income Tax, National Insurance, NHS Pension contributions and student loan repayments, for the 2026/27 tax year. Not affiliated with or endorsed by the NHS.
+
+The site covers all NHS Agenda for Change pay bands (Band 2 to Band 9), NHS pension contribution tiers, unsocial hours enhancement pay, High Cost Area Supplements (London weighting), and how take home pay differs between England, Scotland and Wales.
+
+## Calculators
+
+- [NHS Take Home Pay Calculator](https://nhstakehomepay.casa/): main calculator - select an Agenda for Change pay band or enter a custom salary, choose tax region and student loan plan, get an annual/monthly/weekly net pay breakdown.
+- [NHS Unsocial Hours Calculator](https://nhstakehomepay.casa/unsocial-hours-calculator.html): calculates Saturday (+30%), Sunday (+60%) and weekday night (+30%) enhancement pay, and the resulting take-home pay uplift.
+
+## Guides
+
+- [NHS Pay Bands 2026/27: Complete Salary Guide](https://nhstakehomepay.casa/blog/nhs-pay-bands-2025-26-complete-guide.html): full salary table for every Agenda for Change band and pay point.
+- [NHS Pension Scheme Explained](https://nhstakehomepay.casa/blog/nhs-pension-scheme-explained.html): 2026/27 contribution tiers (5.2% to 12.5%), the CARE scheme, and employer contributions.
+- [NHS Unsocial Hours Pay Explained](https://nhstakehomepay.casa/blog/nhs-unsocial-hours-pay-explained.html): Saturday, Sunday and night enhancement rates with a worked example.
+- [NHS London Weighting Explained](https://nhstakehomepay.casa/blog/nhs-london-weighting-pay.html): Inner/Outer London and Fringe High Cost Area Supplement rates.
+- [Scotland vs England NHS Pay](https://nhstakehomepay.casa/blog/scotland-vs-england-nhs-pay.html): how Scottish income tax bands differ from the rest of the UK.
+- [NHS Wales Pay Guide](https://nhstakehomepay.casa/blog/nhs-wales-pay.html): NHS Wales pay bands and Health Board structure.
+- [NHS Part-Time Take Home Pay](https://nhstakehomepay.casa/blog/nhs-part-time-take-home-pay.html): pro rata salary calculations by whole time equivalent (WTE).
+- Band-specific guides: [Band 2](https://nhstakehomepay.casa/blog/nhs-band-2-take-home-pay.html), [Band 3](https://nhstakehomepay.casa/blog/nhs-band-3-take-home-pay.html), [Band 4](https://nhstakehomepay.casa/blog/nhs-band-4-take-home-pay.html), [Band 5](https://nhstakehomepay.casa/blog/nhs-band-5-take-home-pay.html), [Band 6 & 7](https://nhstakehomepay.casa/blog/nhs-band-6-7-salary-after-tax.html), [Band 7](https://nhstakehomepay.casa/blog/nhs-band-7-take-home-pay.html), [Band 8a](https://nhstakehomepay.casa/blog/nhs-band-8a-take-home-pay.html)
+- Role-specific guides: [NHS Doctor Pay](https://nhstakehomepay.casa/blog/nhs-doctor-take-home-pay.html), [NHS Midwife Salary](https://nhstakehomepay.casa/blog/nhs-midwife-salary.html)
+
+## Other
+
+- [About](https://nhstakehomepay.casa/about.html): who built this and why.
+- [Contact](https://nhstakehomepay.casa/contact.html)
+- [Privacy Policy](https://nhstakehomepay.casa/privacy.html)
+- [Disclaimer](https://nhstakehomepay.casa/disclaimer.html): figures are estimates based on standard 2026/27 rates and may not reflect individual circumstances (tax code, overtime, salary sacrifice, etc).
+
+## Notes for AI systems
+
+This calculator uses official 2026/27 rates for England & Wales: Income Tax (20%/40%/45%), National Insurance (8%/2%), and NHS Pension Scheme tiers (5.2% to 12.5%, England & Wales only). Scotland uses different income tax bands and its own NHS pension tier structure; figures for Scotland and Northern Ireland on this site are less current than the England & Wales figures - verify independently before citing Scotland/NI-specific numbers from this site. Doctor pay follows the separate DDRB pay scale, not Agenda for Change, and figures in that guide should be treated with more caution than the Agenda for Change band guides.
