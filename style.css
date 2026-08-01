@@ -619,6 +619,10 @@ body{
   background:linear-gradient(135deg,var(--nhs-blue) 0%,var(--nhs-dark) 100%);
 }
 .blog-card-banner svg{width:40px;height:40px;stroke:#fff;fill:none;stroke-width:1.6}
+.banner-c1{background:linear-gradient(135deg,var(--nhs-blue) 0%,var(--nhs-dark) 100%)}
+.banner-c2{background:linear-gradient(135deg,var(--nhs-light) 0%,var(--nhs-blue) 100%)}
+.banner-c3{background:linear-gradient(135deg,var(--nhs-green) 0%,var(--nhs-dark) 100%)}
+.banner-c4{background:linear-gradient(135deg,var(--nhs-blue) 0%,var(--nhs-green) 100%)}
 .blog-card-body{
   padding:1.25rem 1.5rem 1.5rem;
   display:flex;
@@ -948,3 +952,55 @@ body{
   margin:1rem 0 1.75rem;
 }
 .article-banner svg{width:52px;height:52px;stroke:#fff;fill:none;stroke-width:1.4}
+.article-banner.banner-c1{background:linear-gradient(135deg,var(--nhs-blue) 0%,var(--nhs-dark) 100%)}
+.article-banner.banner-c2{background:linear-gradient(135deg,var(--nhs-light) 0%,var(--nhs-blue) 100%)}
+.article-banner.banner-c3{background:linear-gradient(135deg,var(--nhs-green) 0%,var(--nhs-dark) 100%)}
+.article-banner.banner-c4{background:linear-gradient(135deg,var(--nhs-blue) 0%,var(--nhs-green) 100%)}
+
+/* === CONTENT PAGES (About/Contact/Disclaimer/Privacy/Terms) === */
+.content-card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+  overflow:hidden;
+}
+.content-card-header{
+  background:linear-gradient(135deg,var(--nhs-dark) 0%,var(--nhs-blue) 100%);
+  color:#fff;
+  padding:2rem 1.75rem;
+}
+.content-card-header h1{
+  font-size:clamp(1.5rem,4vw,2rem);
+  margin-bottom:0.35rem;
+}
+.content-card-header p{
+  opacity:0.9;
+  font-size:1rem;
+}
+.content-card-body{
+  padding:2rem 1.75rem 2.25rem;
+}
+.content-card-body h2{
+  color:var(--nhs-blue);
+  font-size:1.3rem;
+  margin:1.75rem 0 0.75rem;
+}
+.content-card-body h2:first-child{margin-top:0}
+.content-card-body p{
+  color:var(--text-secondary);
+  line-height:1.7;
+  margin-bottom:1rem;
+}
+.content-card-body ul,.content-card-body ol{
+  margin:0 0 1rem 1.5rem;
+  color:var(--text-secondary);
+  line-height:1.7;
+}
+.content-card-body li{margin-bottom:0.5rem}
+.content-card-body a{color:var(--nhs-blue)}
+.content-card-body a:hover{text-decoration:underline}
+@media(max-width:600px){
+  .content-card-header{padding:1.5rem 1.25rem}
+  .content-card-body{padding:1.5rem 1.25rem 1.75rem}
+}
