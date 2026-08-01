@@ -78,59 +78,59 @@ function handleSubmit(e) {
   return false;
 }
 
-// NHS Pay Bands 2025/26 - Agenda for Change (England)
+// NHS Pay Bands 2026/27 - Agenda for Change (England)
+// Source: nhsemployers.org/articles/pay-scales-202627, effective 1 April 2026
 var PAY_BANDS = {
   '2': [
-    {label: 'Entry Point', salary: 23615},
-    {label: 'Top of Band', salary: 24336}
+    {label: 'Standard Rate', salary: 25272}
   ],
   '3': [
-    {label: 'Entry Point', salary: 24625},
-    {label: 'Top of Band', salary: 25674}
+    {label: 'Entry Point', salary: 25760},
+    {label: 'Top of Band', salary: 27476}
   ],
   '4': [
-    {label: 'Entry Point', salary: 26530},
-    {label: 'Top of Band', salary: 29114}
+    {label: 'Entry Point', salary: 28392},
+    {label: 'Top of Band', salary: 31157}
   ],
   '5': [
-    {label: 'Entry Point', salary: 29970},
-    {label: 'Intermediate', salary: 33285},
-    {label: 'Top of Band', salary: 36483}
+    {label: 'Entry Point', salary: 32073},
+    {label: 'Intermediate', salary: 34592},
+    {label: 'Top of Band', salary: 39043}
   ],
   '6': [
-    {label: 'Entry Point', salary: 37338},
-    {label: 'Intermediate', salary: 41120},
-    {label: 'Top of Band', salary: 44962}
+    {label: 'Entry Point', salary: 39959},
+    {label: 'Intermediate', salary: 42170},
+    {label: 'Top of Band', salary: 48117}
   ],
   '7': [
-    {label: 'Entry Point', salary: 46148},
-    {label: 'Intermediate', salary: 49478},
-    {label: 'Top of Band', salary: 52809}
+    {label: 'Entry Point', salary: 49387},
+    {label: 'Intermediate', salary: 51932},
+    {label: 'Top of Band', salary: 56515}
   ],
   '8a': [
-    {label: 'Entry Point', salary: 53755},
-    {label: 'Intermediate', salary: 57130},
-    {label: 'Top of Band', salary: 60504}
+    {label: 'Entry Point', salary: 57528},
+    {label: 'Intermediate', salary: 60417},
+    {label: 'Top of Band', salary: 64750}
   ],
   '8b': [
-    {label: 'Entry Point', salary: 62215},
-    {label: 'Intermediate', salary: 67254},
-    {label: 'Top of Band', salary: 72293}
+    {label: 'Entry Point', salary: 66582},
+    {label: 'Intermediate', salary: 70896},
+    {label: 'Top of Band', salary: 77368}
   ],
   '8c': [
-    {label: 'Entry Point', salary: 73664},
-    {label: 'Intermediate', salary: 79869},
-    {label: 'Top of Band', salary: 86074}
+    {label: 'Entry Point', salary: 79504},
+    {label: 'Intermediate', salary: 84346},
+    {label: 'Top of Band', salary: 91609}
   ],
   '8d': [
-    {label: 'Entry Point', salary: 87410},
-    {label: 'Intermediate', salary: 94237},
-    {label: 'Top of Band', salary: 101064}
+    {label: 'Entry Point', salary: 94356},
+    {label: 'Intermediate', salary: 100140},
+    {label: 'Top of Band', salary: 108814}
   ],
   '9': [
-    {label: 'Entry Point', salary: 105385},
-    {label: 'Intermediate', salary: 113328},
-    {label: 'Top of Band', salary: 121271}
+    {label: 'Entry Point', salary: 112782},
+    {label: 'Intermediate', salary: 119583},
+    {label: 'Top of Band', salary: 129783}
   ]
 };
 
@@ -221,6 +221,9 @@ function calcTaxEngland(gross) {
 }
 
 // Income Tax calculation - Scotland
+// TODO: thresholds below are last verified for 2025/26. Scottish Budget sets its own
+// bands each year independently of rUK - 2026/27 thresholds not yet verified, do not
+// assume unchanged. Rates (19/20/21/42/45/48%) are believed unchanged but unconfirmed here.
 function calcTaxScotland(gross) {
   var pa = 12570;
   if (gross > 100000) {
@@ -285,16 +288,20 @@ function calcNI(gross) {
   return Math.max(0, ni);
 }
 
-// NHS Pension - 2025/26 tiers
+// NHS Pension - 2026/27 tiers (England & Wales)
+// Source: NHS Employers / NHSBSA, effective 1 April 2026, thresholds uplifted 3.8% (Sept 2025 CPI)
+// TODO: Scotland (SPPA) and Northern Ireland (HSC) use different tier structures and a
+// separate 2026/27 pay award - not verified, do not assume these tiers apply to them.
 function calcPension(gross) {
-  if (document.getElementById('pensionOptOut').checked) return 0;
+  var optOutEl = document.getElementById('pensionOptOut');
+  if (optOutEl && optOutEl.checked) return 0;
 
   // Tiers based on actual pensionable pay
   if (gross <= 13259) return gross * 0.052;
-  if (gross <= 27797) return gross * 0.065;
-  if (gross <= 33868) return gross * 0.083;
-  if (gross <= 50845) return gross * 0.098;
-  if (gross <= 65190) return gross * 0.107;
+  if (gross <= 28854) return gross * 0.065;
+  if (gross <= 35155) return gross * 0.083;
+  if (gross <= 52778) return gross * 0.098;
+  if (gross <= 67668) return gross * 0.107;
   return gross * 0.125;
 }
 
@@ -445,4 +452,97 @@ function drawDonutChart(takeHome, tax, ni, pension, studentLoan, gross) {
       items[j].color + '"></div>' + items[j].label + ' (' + pctVal + '%)</div>';
   }
   legend.innerHTML = legendHtml;
+}
+
+// ============================================================
+// NHS Unsocial Hours Enhancement Calculator
+// Rates: Saturday +30%, Sunday +60%, weekday nights +30% of hourly rate,
+// paid on top of basic pay for hours actually worked in those periods.
+// ============================================================
+var UNSOCIAL_RATES = {saturday: 0.30, sunday: 0.60, night: 0.30};
+var WEEKS_PER_YEAR = 52.143; // 365.25 / 7
+var currentUnsocialResults = null;
+
+function calcHourlyRate(annualGross, weeklyHours) {
+  if (!weeklyHours || weeklyHours <= 0) return 0;
+  return annualGross / WEEKS_PER_YEAR / weeklyHours;
+}
+
+function calculateUnsocialHours() {
+  var gross = getGrossSalary();
+  if (gross <= 0) {
+    alert('Please select a pay band or enter a salary.');
+    return;
+  }
+
+  var weeklyHours = parseFloat(document.getElementById('uhWeeklyHours').value) || 37.5;
+  var satHours = parseFloat(document.getElementById('uhSatHours').value) || 0;
+  var sunHours = parseFloat(document.getElementById('uhSunHours').value) || 0;
+  var nightHours = parseFloat(document.getElementById('uhNightHours').value) || 0;
+
+  if (satHours <= 0 && sunHours <= 0 && nightHours <= 0) {
+    alert('Enter your typical Saturday, Sunday or night hours to calculate your enhancement.');
+    return;
+  }
+
+  var hourlyRate = calcHourlyRate(gross, weeklyHours);
+
+  var satEnhancement = satHours * hourlyRate * UNSOCIAL_RATES.saturday;
+  var sunEnhancement = sunHours * hourlyRate * UNSOCIAL_RATES.sunday;
+  var nightEnhancement = nightHours * hourlyRate * UNSOCIAL_RATES.night;
+  var weeklyEnhancement = satEnhancement + sunEnhancement + nightEnhancement;
+  var annualEnhancement = weeklyEnhancement * WEEKS_PER_YEAR;
+
+  var region = document.getElementById('taxRegion').value;
+  var calcTax = (region === 'scotland') ? calcTaxScotland : calcTaxEngland;
+
+  var baseTax = calcTax(gross);
+  var baseNI = calcNI(gross);
+  var basePension = calcPension(gross);
+  var baseTakeHome = gross - baseTax - baseNI - basePension;
+
+  var enhancedGross = gross + annualEnhancement;
+  var enhancedTax = calcTax(enhancedGross);
+  var enhancedNI = calcNI(enhancedGross);
+  var enhancedPension = calcPension(enhancedGross);
+  var enhancedTakeHome = enhancedGross - enhancedTax - enhancedNI - enhancedPension;
+
+  currentUnsocialResults = {
+    hourlyRate: hourlyRate,
+    satHours: satHours, sunHours: sunHours, nightHours: nightHours,
+    satEnhancement: satEnhancement, sunEnhancement: sunEnhancement, nightEnhancement: nightEnhancement,
+    weeklyEnhancement: weeklyEnhancement, annualEnhancement: annualEnhancement,
+    baseGross: gross, enhancedGross: enhancedGross,
+    baseTakeHome: baseTakeHome, enhancedTakeHome: enhancedTakeHome,
+    takeHomeUplift: enhancedTakeHome - baseTakeHome
+  };
+
+  renderUnsocialResults();
+
+  if (window.innerWidth < 769) {
+    document.getElementById('uhResultsSection').scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+}
+
+function renderUnsocialResults() {
+  var r = currentUnsocialResults;
+  if (!r) return;
+
+  document.getElementById('uhResultsSection').classList.add('visible');
+  document.getElementById('uhPlaceholderCard').style.display = 'none';
+
+  document.getElementById('uhHourlyRate').textContent = formatCurrency(r.hourlyRate);
+  document.getElementById('uhWeeklyEnhancement').textContent = formatCurrency(r.weeklyEnhancement);
+  document.getElementById('uhAnnualEnhancement').textContent = formatCurrency(r.annualEnhancement);
+  document.getElementById('uhMonthlyEnhancement').textContent = formatCurrency(r.annualEnhancement / 12);
+
+  document.getElementById('r-uh-sat').textContent = formatCurrency(r.satEnhancement) + ' / week';
+  document.getElementById('r-uh-sun').textContent = formatCurrency(r.sunEnhancement) + ' / week';
+  document.getElementById('r-uh-night').textContent = formatCurrency(r.nightEnhancement) + ' / week';
+
+  document.getElementById('r-uh-base-gross').textContent = formatCurrency(r.baseGross);
+  document.getElementById('r-uh-enhanced-gross').textContent = formatCurrency(r.enhancedGross);
+  document.getElementById('r-uh-base-takehome').textContent = formatCurrency(r.baseTakeHome);
+  document.getElementById('r-uh-enhanced-takehome').textContent = formatCurrency(r.enhancedTakeHome);
+  document.getElementById('r-uh-uplift').textContent = formatCurrency(r.takeHomeUplift) + ' / year (' + formatCurrency(r.takeHomeUplift / 12) + ' / month)';
 }
