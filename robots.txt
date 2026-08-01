@@ -1,7 +1,62 @@
 # Robots.txt for NHS Take Home Pay Calculator
 # https://nhstakehomepay.casa/
 
+# Default: allow everything for any crawler not listed below
 User-agent: *
 Allow: /
+
+# --- Search engines (explicitly allowed) ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# --- AI answer engines / LLM crawlers (explicitly allowed, for GEO/AEO) ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# --- Aggressive SEO scraper bots (disallowed - no search traffic, wastes bandwidth) ---
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: MauiBot
+Disallow: /
 
 Sitemap: https://nhstakehomepay.casa/sitemap.xml

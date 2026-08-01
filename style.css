@@ -750,25 +750,28 @@ body{
   margin:1.25rem 0;
   font-size:0.9rem;
 }
-.article-content .cta-box{
+.cta-box{
   background:linear-gradient(135deg,var(--nhs-blue),var(--nhs-dark));
   color:#fff;
-  padding:1.5rem;
+  padding:2rem 1.5rem;
   border-radius:var(--radius);
   text-align:center;
   margin:1.5rem 0;
 }
-.article-content .cta-box a{
+.cta-box h3{color:#fff;font-size:1.2rem;margin-bottom:0.5rem}
+.cta-box p{color:rgba(255,255,255,0.9);margin-bottom:1rem}
+.cta-box a,.cta-box .cta-btn{
   display:inline-block;
   background:#fff;
   color:var(--nhs-blue);
-  padding:0.6rem 1.5rem;
+  padding:0.7rem 1.75rem;
   border-radius:8px;
   font-weight:700;
   text-decoration:none;
-  margin-top:0.75rem;
+  margin-top:0.25rem;
+  transition:transform 0.2s,box-shadow 0.2s;
 }
-.article-content .cta-box a:hover{background:#f0f4f5}
+.cta-box a:hover,.cta-box .cta-btn:hover{background:#f0f4f5;transform:translateY(-1px);text-decoration:none}
 .related-articles{
   margin-top:2.5rem;
   padding-top:1.5rem;
@@ -1004,3 +1007,104 @@ body{
   .content-card-header{padding:1.5rem 1.25rem}
   .content-card-body{padding:1.5rem 1.25rem 1.75rem}
 }
+
+/* === MAIN CALCULATOR - previously-missing pieces === */
+.hint{
+  font-size:0.8rem;
+  color:var(--text-secondary);
+  margin-bottom:0.4rem;
+}
+.checkbox-group{
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+  margin:1rem 0;
+}
+.checkbox-group input{width:auto;cursor:pointer}
+.checkbox-group label{font-size:0.9rem;color:var(--text);cursor:pointer;margin:0}
+.tax-note{
+  background:#f0f7ff;
+  border:1px solid rgba(0,94,184,0.2);
+  border-radius:8px;
+  padding:0.85rem 1rem;
+  font-size:0.8rem;
+  color:var(--text-secondary);
+  margin-top:1.25rem;
+  line-height:1.5;
+}
+.income{color:var(--nhs-green);font-weight:600;text-align:right}
+.deduction{color:#d4351c;font-weight:600;text-align:right}
+.chart-container{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  margin-bottom:1.25rem;
+}
+.chart-center{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  pointer-events:none;
+}
+.pct{font-size:1.75rem;font-weight:700;color:var(--nhs-dark)}
+.pct-label{font-size:0.8rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.03em}
+.legend{display:flex;flex-direction:column;gap:0.5rem}
+.legend-item{display:flex;align-items:center;gap:0.5rem;font-size:0.875rem;color:var(--text)}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.donut-chart{display:block;max-width:100%;height:auto}
+
+/* === EXPLAINER / FAQ CARDS (index.html, unsocial-hours-calculator.html) === */
+.info-section{
+  max-width:900px;
+  margin:2.5rem auto;
+  padding:1.75rem;
+  background:#fff;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+}
+.info-section h2{
+  color:var(--nhs-blue);
+  font-size:1.4rem;
+  margin-bottom:1rem;
+}
+.info-section p{
+  color:var(--text-secondary);
+  line-height:1.7;
+  margin-bottom:0.9rem;
+}
+.info-section p:last-child{margin-bottom:0}
+.info-section strong{color:var(--text)}
+
+/* === MAIN CALCULATOR - bottom disclaimer footer (distinct from .site-footer) === */
+.footer{
+  max-width:900px;
+  margin:2rem auto;
+  padding:0 1rem;
+  text-align:center;
+  color:var(--text-secondary);
+  font-size:0.85rem;
+  line-height:1.6;
+}
+.footer a{color:var(--nhs-blue)}
+
+/* === BLOG ARTICLE PAGES (shared-CSS template) === */
+.page-container{
+  max-width:900px;
+  margin:0 auto;
+  padding:2rem 1rem 3rem;
+}
+.related-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.related-list li{margin-bottom:0.75rem}
+.related-list a{
+  color:var(--nhs-blue);
+  text-decoration:none;
+  font-weight:600;
+  font-size:0.95rem;
+}
+.related-list a:hover{text-decoration:underline}
