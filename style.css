@@ -1138,3 +1138,22 @@ body{
   font-size:0.95rem;
 }
 .related-list a:hover{text-decoration:underline}
+
+/* === AD SLOTS (Adsterra) === */
+.ad-slot{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:1.5rem auto;
+  max-width:100%;
+  overflow:hidden;
+}
+.ad-slot-728{min-height:90px}
+.ad-slot-320{min-height:50px}
+.ad-slot-300{min-height:250px}
+@media(max-width:600px){
+  .ad-slot-728{display:none}
+}
+@media(min-width:601px){
+  .ad-slot-320{display:none}
+}
