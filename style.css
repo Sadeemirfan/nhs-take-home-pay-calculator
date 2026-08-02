@@ -961,6 +961,8 @@ body{
 .article-banner.banner-c2{background:linear-gradient(135deg,var(--nhs-light) 0%,var(--nhs-blue) 100%)}
 .article-banner.banner-c3{background:linear-gradient(135deg,var(--nhs-green) 0%,var(--nhs-dark) 100%)}
 .article-banner.banner-c4{background:linear-gradient(135deg,var(--nhs-blue) 0%,var(--nhs-green) 100%)}
+.article-meta{color:#666;font-size:0.9rem;margin:0 0 1rem 0}
+.article-meta a{color:var(--nhs-blue);text-decoration:underline}
 
 /* === CONTENT PAGES (About/Contact/Disclaimer/Privacy/Terms) === */
 .content-card{
