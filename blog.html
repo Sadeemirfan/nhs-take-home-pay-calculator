@@ -70,6 +70,12 @@ NHS Pay Calculator
 </div>
 <div class="page-container">
 
+<div class="blog-search">
+<label for="blog-search-input" class="sr-only">Search articles</label>
+<input type="text" id="blog-search-input" placeholder="Search articles by band, role or topic (e.g. &quot;Band 5&quot;, &quot;pension&quot;, &quot;Wales&quot;)&#8230;" autocomplete="off" oninput="filterBlogCards(this.value)">
+<p id="blog-search-empty" class="blog-search-empty" hidden>No articles match your search. Try a different term.</p>
+</div>
+
 <div class="blog-grid">
 
 <a href="blog/nhs-band-2-take-home-pay.html" class="blog-card">
