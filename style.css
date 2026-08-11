@@ -28,6 +28,13 @@ body{
   display:flex;
   flex-direction:column;
 }
+/* Flex items default to min-width:auto, letting wide descendants (e.g. a
+   min-width table) force the whole page wider than the viewport on mobile */
+body > *{min-width:0;width:100%}
+/* Wide data tables scroll inside themselves rather than widening the page */
+@media(max-width:600px){
+  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+}
 
 /* === NAVIGATION === */
 .site-nav{
