@@ -1,0 +1,8 @@
+# The site moved to healthcarepaycalculator.co.uk (Cloudflare Pages).
+# This Netlify deploy only serves the old .casa domain: send every URL to
+# the same path on the new domain so rankings carry over.
+[[redirects]]
+  from = "/*"
+  to = "https://healthcarepaycalculator.co.uk/:splat"
+  status = 301
+  force = true

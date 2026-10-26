@@ -1,5 +1,5 @@
 # Robots.txt for NHS Take Home Pay Calculator
-# https://nhstakehomepay.casa/
+# https://healthcarepaycalculator.co.uk/
 
 # Default: allow everything for any crawler not listed below
 User-agent: *
@@ -59,4 +59,4 @@ Disallow: /
 User-agent: MauiBot
 Disallow: /
 
-Sitemap: https://nhstakehomepay.casa/sitemap.xml
+Sitemap: https://healthcarepaycalculator.co.uk/sitemap.xml

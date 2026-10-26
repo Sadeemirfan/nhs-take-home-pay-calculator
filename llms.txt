@@ -6,27 +6,27 @@ The site covers all NHS Agenda for Change pay bands (Band 2 to Band 9), NHS pens
 
 ## Calculators
 
-- [NHS Take Home Pay Calculator](https://nhstakehomepay.casa/): main calculator - select an Agenda for Change pay band or enter a custom salary, choose tax region and student loan plan, get an annual/monthly/weekly net pay breakdown.
-- [NHS Unsocial Hours Calculator](https://nhstakehomepay.casa/unsocial-hours-calculator.html): calculates Saturday (+30%), Sunday (+60%) and weekday night (+30%) enhancement pay, and the resulting take-home pay uplift.
+- [NHS Take Home Pay Calculator](https://healthcarepaycalculator.co.uk/): main calculator - select an Agenda for Change pay band or enter a custom salary, choose tax region and student loan plan, get an annual/monthly/weekly net pay breakdown.
+- [NHS Unsocial Hours Calculator](https://healthcarepaycalculator.co.uk/unsocial-hours-calculator.html): calculates Saturday (+30%), Sunday (+60%) and weekday night (+30%) enhancement pay, and the resulting take-home pay uplift.
 
 ## Guides
 
-- [NHS Pay Bands 2026/27: Complete Salary Guide](https://nhstakehomepay.casa/blog/nhs-pay-bands-2025-26-complete-guide.html): full salary table for every Agenda for Change band and pay point.
-- [NHS Pension Scheme Explained](https://nhstakehomepay.casa/blog/nhs-pension-scheme-explained.html): 2026/27 contribution tiers (5.2% to 12.5%), the CARE scheme, and employer contributions.
-- [NHS Unsocial Hours Pay Explained](https://nhstakehomepay.casa/blog/nhs-unsocial-hours-pay-explained.html): Saturday, Sunday and night enhancement rates with a worked example.
-- [NHS London Weighting Explained](https://nhstakehomepay.casa/blog/nhs-london-weighting-pay.html): Inner/Outer London and Fringe High Cost Area Supplement rates.
-- [Scotland vs England NHS Pay](https://nhstakehomepay.casa/blog/scotland-vs-england-nhs-pay.html): how Scottish income tax bands differ from the rest of the UK.
-- [NHS Wales Pay Guide](https://nhstakehomepay.casa/blog/nhs-wales-pay.html): NHS Wales pay bands and Health Board structure.
-- [NHS Part-Time Take Home Pay](https://nhstakehomepay.casa/blog/nhs-part-time-take-home-pay.html): pro rata salary calculations by whole time equivalent (WTE).
-- Band-specific guides: [Band 2](https://nhstakehomepay.casa/blog/nhs-band-2-take-home-pay.html), [Band 3](https://nhstakehomepay.casa/blog/nhs-band-3-take-home-pay.html), [Band 4](https://nhstakehomepay.casa/blog/nhs-band-4-take-home-pay.html), [Band 5](https://nhstakehomepay.casa/blog/nhs-band-5-take-home-pay.html), [Band 6 & 7](https://nhstakehomepay.casa/blog/nhs-band-6-7-salary-after-tax.html), [Band 7](https://nhstakehomepay.casa/blog/nhs-band-7-take-home-pay.html), [Band 8a](https://nhstakehomepay.casa/blog/nhs-band-8a-take-home-pay.html)
-- Role-specific guides: [NHS Doctor Pay](https://nhstakehomepay.casa/blog/nhs-doctor-take-home-pay.html), [NHS Midwife Salary](https://nhstakehomepay.casa/blog/nhs-midwife-salary.html)
+- [NHS Pay Bands 2026/27: Complete Salary Guide](https://healthcarepaycalculator.co.uk/blog/nhs-pay-bands-2025-26-complete-guide.html): full salary table for every Agenda for Change band and pay point.
+- [NHS Pension Scheme Explained](https://healthcarepaycalculator.co.uk/blog/nhs-pension-scheme-explained.html): 2026/27 contribution tiers (5.2% to 12.5%), the CARE scheme, and employer contributions.
+- [NHS Unsocial Hours Pay Explained](https://healthcarepaycalculator.co.uk/blog/nhs-unsocial-hours-pay-explained.html): Saturday, Sunday and night enhancement rates with a worked example.
+- [NHS London Weighting Explained](https://healthcarepaycalculator.co.uk/blog/nhs-london-weighting-pay.html): Inner/Outer London and Fringe High Cost Area Supplement rates.
+- [Scotland vs England NHS Pay](https://healthcarepaycalculator.co.uk/blog/scotland-vs-england-nhs-pay.html): how Scottish income tax bands differ from the rest of the UK.
+- [NHS Wales Pay Guide](https://healthcarepaycalculator.co.uk/blog/nhs-wales-pay.html): NHS Wales pay bands and Health Board structure.
+- [NHS Part-Time Take Home Pay](https://healthcarepaycalculator.co.uk/blog/nhs-part-time-take-home-pay.html): pro rata salary calculations by whole time equivalent (WTE).
+- Band-specific guides: [Band 2](https://healthcarepaycalculator.co.uk/blog/nhs-band-2-take-home-pay.html), [Band 3](https://healthcarepaycalculator.co.uk/blog/nhs-band-3-take-home-pay.html), [Band 4](https://healthcarepaycalculator.co.uk/blog/nhs-band-4-take-home-pay.html), [Band 5](https://healthcarepaycalculator.co.uk/blog/nhs-band-5-take-home-pay.html), [Band 6 & 7](https://healthcarepaycalculator.co.uk/blog/nhs-band-6-7-salary-after-tax.html), [Band 7](https://healthcarepaycalculator.co.uk/blog/nhs-band-7-take-home-pay.html), [Band 8a](https://healthcarepaycalculator.co.uk/blog/nhs-band-8a-take-home-pay.html)
+- Role-specific guides: [NHS Doctor Pay](https://healthcarepaycalculator.co.uk/blog/nhs-doctor-take-home-pay.html), [NHS Midwife Salary](https://healthcarepaycalculator.co.uk/blog/nhs-midwife-salary.html)
 
 ## Other
 
-- [About](https://nhstakehomepay.casa/about.html): who built this and why.
-- [Contact](https://nhstakehomepay.casa/contact.html)
-- [Privacy Policy](https://nhstakehomepay.casa/privacy.html)
-- [Disclaimer](https://nhstakehomepay.casa/disclaimer.html): figures are estimates based on standard 2026/27 rates and may not reflect individual circumstances (tax code, overtime, salary sacrifice, etc).
+- [About](https://healthcarepaycalculator.co.uk/about.html): who built this and why.
+- [Contact](https://healthcarepaycalculator.co.uk/contact.html)
+- [Privacy Policy](https://healthcarepaycalculator.co.uk/privacy.html)
+- [Disclaimer](https://healthcarepaycalculator.co.uk/disclaimer.html): figures are estimates based on standard 2026/27 rates and may not reflect individual circumstances (tax code, overtime, salary sacrifice, etc).
 
 ## Notes for AI systems
 
